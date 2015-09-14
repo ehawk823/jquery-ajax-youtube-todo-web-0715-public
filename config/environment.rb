@@ -8,3 +8,6 @@ Dotenv.load
 
 require './lib/youtube.rb'
 require './app'
+
+# This is terrible and breaks ALL SECURITYz Not a long term solution
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE

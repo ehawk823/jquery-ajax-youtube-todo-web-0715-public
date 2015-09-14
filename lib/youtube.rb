@@ -7,6 +7,7 @@ class YouTube
   def initialize(search_term)
     Yt.configure do |config|
       config.api_key = ENV['DEVELOPER_KEY']
+      config.log_level = :debug
     end
     @search_term = search_term
     @videos = Yt::Collections::Videos.new
